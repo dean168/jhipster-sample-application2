@@ -1,0 +1,16 @@
+// 购买订单
+entity DEOrder {
+    id String required // 订单 id
+    sku String required // 华为 sku
+    company String required // 订单公司
+    status DEOrderStatus required // 订单状态
+    createdAt Date required // 订单日期
+}
+// 定义订单状态的枚举
+enum DEOrderStatus {
+    PENDING, // 待处理
+    PROCESSING, // 处理中
+    SHIPPED, // 已发货
+    DELIVERED, // 已送达
+    CANCELED // 已取消
+}
